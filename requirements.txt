@@ -1,0 +1,8 @@
+streamlit
+numpy
+pandas
+shapely
+seaborn
+matplotlib
+PIL
+docx
