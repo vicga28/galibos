@@ -4,5 +4,5 @@ pandas
 shapely
 seaborn
 matplotlib
-docx
+python-docx
 openpyxl
