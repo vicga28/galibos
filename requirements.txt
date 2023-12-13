@@ -4,5 +4,4 @@ pandas
 shapely
 seaborn
 matplotlib
-PIL
 docx
