@@ -166,7 +166,7 @@ else:
         print("Has introducido un ancho de vía inexistente.")
 
 if st.button("Gálibo recomendado"):
-    st.write("El gálibo recomendado para las partes altas es el %s y para las partes bajas es el %s" % (partes_altas_guia, partes_bajas_guia))
+    st.write("El gálibo recomendado para las partes altas es el **%s** y para las partes bajas es el **%s**" % (partes_altas_guia, partes_bajas_guia))
 
 #Selección contorno de referencia
 if st.session_state.ancho_via == 1.435:
@@ -2007,7 +2007,7 @@ gal_nom = pd.DataFrame(coords_nom, columns = ['Gálibo nominal(b)', 'Gálibo nom
 if st.button("Gálibo límite"):
     ##Dibujar poligonos individuales
     plt.figure(figsize=(5,8))
-    fig, ax = plt.subplots()
+    fig_part, ax = plt.subplots()
     fig1, = ax.plot(*pol1.exterior.xy)
     fig2, = ax.plot(*pol2.exterior.xy)
     fig3, = ax.plot(*pol3.exterior.xy)
@@ -2020,12 +2020,12 @@ if st.button("Gálibo límite"):
     plt.ylabel('Altura (m)')
     ax.legend([fig1, fig2, fig3, fig4], ['Ancho máximo con altura compatible (vmax)', 'Ancho máximo con altura compatible (v=0)',
     'Altura máxima con ancho compatible (vmax)', 'Altura máxima con ancho compatible (v=0)'], bbox_to_anchor=(1., 1.28), loc=1)
-    st.pyplot(fig)
+    #st.pyplot(fig)
     plt.savefig('Casos particulares gálibo límite.png', bbox_inches='tight')
 
 
     plt.figure(figsize=(5,5), tight_layout = True)
-    fig, ax = plt.subplots()
+    fig_gal, ax = plt.subplots()
     ax.plot(*gal_lim_unified.exterior.xy)
     ax.set_xlim(-2.5,2.5)
     ax.set_ylim(-0.25,5.)
@@ -2036,8 +2036,18 @@ if st.button("Gálibo límite"):
     plt.suptitle('Gálibo límite de implantación de obstáculos')
     plt.title('%s + %s'%(st.session_state.partes_altas, st.session_state.partes_bajas))
 
-    st.pyplot(fig)
+    #st.pyplot(fig)
     plt.savefig('Gálibo límite.png')
+
+    col5, col6 = st.columns(2)
+
+    with col5:
+        st.markdown('**Gálibos casos particulares**')
+        st.pyplot(fig_part)
+
+    with col6:
+        st.markdown('**Gálibo límite de implantación de obstáculos**')
+        st.pyplot(fig_gal)
 
     #st.write(gal_lim)
     with pd.ExcelWriter('Gálibo límite.xlsx') as writer:
