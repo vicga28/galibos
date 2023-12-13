@@ -5,3 +5,4 @@ shapely
 seaborn
 matplotlib
 docx
+openpyxl
