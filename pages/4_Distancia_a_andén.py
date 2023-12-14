@@ -3,15 +3,11 @@ import pandas as pd
 import numpy as np
 from math import pi
 
-st.set_page_config(
-    page_title = 'Calculadora de gálibos',
-    page_icon = '🚊',
-    layout = 'centered'
-)
-
 st.markdown ("# Distancia vía-andén")
-#st.sidebar.markdown(" # Distancia vía-andén")
+st.sidebar.markdown(" # Distancia vía-andén")
 
+
+st.write('Hola hola')
 #INPUTS
 
 ##Altura borde andén (respecto el plano de rodadura y perpendicular a éste)
