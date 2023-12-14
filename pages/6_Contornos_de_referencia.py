@@ -20,6 +20,8 @@ st. subheader('Ancho ibérico (1.668 mm)', divider = 'grey')
 col1, col2, col3 = st.columns(3)
 
 with col1:
+    st.image('https://github.com/vicga28/galibos/blob/main/calculo_galibos/GEA16.jpg?raw=true',
+             caption = 'Contorno de referencia del gálibo cinemático GEA16. Partes altas')
     image = Image.open('https://github.com/vicga28/galibos/blob/main/calculo_galibos/GEA16.jpg?raw=true')
     st.image(image, caption = 'Contorno de referencia del gálibo cinemático GEA16. Partes altas')
     image2 = Image.open('C:/Users/gullonav/Desktop/Gálibos/calculo_galibos/GEI1.jpg')
