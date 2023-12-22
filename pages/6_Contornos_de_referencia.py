@@ -24,11 +24,11 @@ with col1:
              caption = 'Contorno de referencia del gálibo cinemático GEA16. Partes altas')
     image = Image.open('https://github.com/vicga28/galibos/blob/main/calculo_galibos/GEA16.jpg?raw=true')
     st.image(image, caption = 'Contorno de referencia del gálibo cinemático GEA16. Partes altas')
-    image2 = Image.open('C:/Users/gullonav/Desktop/Gálibos/calculo_galibos/GEI1.jpg')
+    image2 = Image.open('https://github.com/vicga28/galibos/blob/main/calculo_galibos/GEI1.jpg?raw=true')
     st.image(image2, caption = 'Contorno de referencia del gálibo cinemático GEI1. Partes bajas')
 
 with col2:
-    image = Image.open('C:/Users/gullonav/Desktop/Gálibos/calculo_galibos/GEB16.jpg')
+    image = Image.open('calculo_galibos/GEB16.jpg')
     st.image(image, caption = 'Contorno de referencia del gálibo cinemático GEB16. Partes altas')
     mage2 = Image.open('C:/Users/gullonav/Desktop/Gálibos/calculo_galibos/GEI2.jpg')
     st.image(image2, caption = 'Contorno de referencia del gálibo cinemático GEI2. Partes bajas')
